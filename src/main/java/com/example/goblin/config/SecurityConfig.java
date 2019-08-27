@@ -14,15 +14,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
     
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/").authenticated()
-                .antMatchers("/h2_console/**").permitAll();
-        
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
-    }
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.authorizeRequests()
+//                .antMatchers("/h2_console/**").permitAll();
+//
+//        http.csrf().disable();
+//        http.headers().frameOptions().disable();
+//    }
     
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class Authorities {
     
     @Id
-    private String userId;
+    private String username;
     @Column(nullable = false)
     private String authority;
     
